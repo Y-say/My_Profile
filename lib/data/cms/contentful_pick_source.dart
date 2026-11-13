@@ -16,7 +16,7 @@ class ContentfulPickSource implements PickSource {
   Future<List<Pick>> fetchPicks() async {
     final uri = Uri.parse('$baseUrl/entries').replace(
       queryParameters: {
-        'content_type': 'pick',
+        'content_type': 'myPicks',
         'order': '-sys.createdAt',
         'limit': '100',
       },
@@ -44,7 +44,7 @@ class ContentfulPickSource implements PickSource {
         'title': fields['title'],
         'kind': fields['kind'],
         'externalId': fields['externalId'],
-        'note': fields['note'],
+        'note': fields['description'],
       });
     }).toList();
   }
