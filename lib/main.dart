@@ -3,7 +3,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:http/http.dart' as http;
 
 import 'config.dart';
-import 'data/cms/strapi_pick_source.dart';
+import 'data/cms/contentful_pick_source.dart';
 import 'screens/shelf_screen.dart';
 
 const String profileBio = '''
@@ -60,7 +60,7 @@ class _HomeShellState extends State<HomeShell> {
   @override
   void initState() {
     super.initState();
-    final pickSource = StrapiPickSource(
+    final pickSource = ContentfulPickSource(
       http.Client(),
       baseUrl: cmsUrl,
       token: cmsToken,
