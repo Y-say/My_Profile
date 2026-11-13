@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:brillantes_unit5_exercise/main.dart';
+import 'package:brillantes_unit_8_exercise/main.dart';
 
 void main() {
   testWidgets('app loads', (WidgetTester tester) async {
